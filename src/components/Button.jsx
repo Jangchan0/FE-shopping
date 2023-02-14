@@ -21,7 +21,7 @@ const Button = styled.button`
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : '700')};
 
   color: ${({ color }) => (color ? color : 'white')};
-  background-color: ${({ bgColor }) => (bgColor ? bgColor : 'black')};
+  background-color: ${({ bgColor }) => (bgColor ? bgColor : '#4957CD')};
 `;
 
 export default Button;
