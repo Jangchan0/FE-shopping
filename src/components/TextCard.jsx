@@ -22,6 +22,19 @@ const TextCard = styled.div`
 
   color: ${({ color }) => (color ? color : 'black')};
   background-color: ${({ bgColor }) => (bgColor ? bgColor : 'none')};
+
+  .description {
+    font-size: 1.5rem;
+  }
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .discount {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 1.5rem;
+  }
 `;
 
 export default TextCard;

@@ -1,0 +1,55 @@
+[
+  {
+    "productList": [
+      {
+        "product_id": 1,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,000원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 2,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,001원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 3,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,002원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 4,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,003원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 5,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,003원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 6,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,003원",
+        "product_discount": "30% 할인"
+      },
+      {
+        "product_id": 7,
+        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
+        "product_price": "17,003원",
+        "product_discount": "30% 할인"
+      }
+    ]
+  }
+]
