@@ -24,16 +24,29 @@ const TextCard = styled.div`
   background-color: ${({ bgColor }) => (bgColor ? bgColor : 'none')};
 
   .description {
+    height: 3.5rem;
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
-  .price {
+  .price-before {
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #d0d5dd;
+    margin: 0 1.2rem;
+  }
+
+  .price-after {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
   }
   .discount {
     font-size: 0.8rem;
     font-weight: 400;
-    margin-left: 1.5rem;
+  }
+  .date {
+    margin-bottom: 1rem;
   }
 `;
 

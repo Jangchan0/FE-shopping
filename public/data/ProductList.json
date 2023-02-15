@@ -3,52 +3,43 @@
     "productList": [
       {
         "product_id": 1,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
+        "product_img_url": "https://shop-phinf.pstatic.net/20220208_141/1644310830127X55r0_PNG/45446664718361340_1471321201.PNG?type=m510",
         "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,000원",
-        "product_discount": "30% 할인"
+        "product_price_before": "18,000원",
+        "product_price_after": "16,200원",
+        "product_discount": "10% 할인",
+        "product_date": "2022년 6월 25일",
+        "product_isbn": "9791125338758"
       },
       {
         "product_id": 2,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,001원",
-        "product_discount": "30% 할인"
+        "product_img_url": "https://shop-phinf.pstatic.net/20220331_207/1648709362910RzTJj_PNG/49845208386951297_901293367.PNG?type=m510",
+        "product_description": "[CSM17&능률] EBS 수능특강 변형문제집 (구 EBS NEXT STEP)",
+        "product_price_before": "15,000원",
+        "product_price_after": "13,500원",
+        "product_discount": "10% 할인",
+        "product_date": "2022년 4월 5일",
+        "product_isbn": "9791125339182"
       },
       {
         "product_id": 3,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,002원",
-        "product_discount": "30% 할인"
+        "product_img_url": "https://shop-phinf.pstatic.net/20211013_91/1634103857819WCTpK_PNG/35239753517554323_1933851811.png?type=m510",
+        "product_description": "2022 UNION 모의고사 3회분",
+        "product_price_before": "18,000원",
+        "product_price_after": "16,200원",
+        "product_discount": "10% 할인",
+        "product_date": "2021년 10월 1일",
+        "product_isbn": "9791191522075"
       },
       {
         "product_id": 4,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,003원",
-        "product_discount": "30% 할인"
-      },
-      {
-        "product_id": 5,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,003원",
-        "product_discount": "30% 할인"
-      },
-      {
-        "product_id": 6,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,003원",
-        "product_discount": "30% 할인"
-      },
-      {
-        "product_id": 7,
-        "product_img_url": "https://image.aladin.co.kr/product/26212/56/cover500/k352738281_1.jpg",
-        "product_description": "[CSM17&능률] 시험직전R 수학1, 수학2",
-        "product_price": "17,003원",
-        "product_discount": "30% 할인"
+        "product_img_url": "https://shop-phinf.pstatic.net/20210720_280/1626757052474jmzAe_PNG/27892898143930396_283765147.png?type=m510",
+        "product_description": "2022 EBS NEXT STEP 수능완성편 (+수능특강편 SET)",
+        "product_price_before": "15,000원",
+        "product_price_after": "13,500원",
+        "product_discount": "10% 할인",
+        "product_date": "2022년 7월 20일",
+        "product_isbn": "9791191522051"
       }
     ]
   }

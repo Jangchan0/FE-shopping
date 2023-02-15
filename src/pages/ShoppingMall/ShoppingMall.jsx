@@ -20,16 +20,23 @@ const ShoppingMall = () => {
               product_id,
               product_img_url,
               product_description,
-              product_price,
+              product_price_before,
+              product_price_after,
               product_discount,
+              product_date,
+              product_isbn,
             } = product;
+
             return (
               <ProductCard
                 key={product_id}
                 imgUrl={product_img_url}
                 description={product_description}
-                price={product_price}
+                priceBefore={product_price_before}
+                priceAfter={product_price_after}
                 discount={product_discount}
+                date={product_date}
+                isbn={product_isbn}
               />
             );
           })}
