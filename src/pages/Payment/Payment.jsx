@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components/macro';
 import PaymentInputArea from './components/PaymentInputArea';
 import PaymentAmount from './components/PaymentAmount';
@@ -17,9 +18,9 @@ const USER_DATA = [
         buyItems: [
           {
             buyItem_id: 1,
-            buyItem_name: '[EBS]수학',
-            imp_uid: '',
-            merchant_uid: '',
+            merchant_uid: 'merchant-uid',
+            merchant_name: '[EBS]수학',
+            imp_uid: 'imp-uid',
           },
         ],
       },
@@ -40,31 +41,28 @@ const Payment = () => {
         name: '주문명:결제테스트',
         amount: 100,
         buyer_email: 'iamport@siot.do',
-        buyer_name: '구매자이름',
+        buyer_name: '구매자이름:JAKE',
         buyer_tel: '010-1234-5678',
         buyer_addr: '서울특별시 강남구 삼성동',
         buyer_postcode: '123-456',
-        m_redirect_url: '/',
       },
       function (rsp) {
         if (rsp.success) {
-          fetch('http://onecue.cafe24app.com/api/pay/complete', {
+          axios({
+            url: 'http://onecue.cafe24app.com/api/pay/complete',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: {
               imp_uid: rsp.imp_uid,
               merchant_uid: rsp.merchant_uid,
             },
-          })
-            .then(res => res.json())
-            .then(data => {
-              console.log(data);
-              alert('결제성공');
-            })
-            .catch(err => {
-              console.log(err);
-              alert('결제실패');
-            });
+          }).then(data => {
+            alert('결제성공');
+            console.log(rsp);
+            console.log(data);
+          });
+        } else {
+          alert(`결제에 실패하였습니다. 에러내용: ${rsp.error_msg}`);
         }
       }
     );
