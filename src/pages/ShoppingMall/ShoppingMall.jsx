@@ -48,7 +48,7 @@ const ShoppingMall = () => {
 
 export default ShoppingMall;
 
-const ShoppingMallContainer = styled.div`
+const ShoppingMallContainer = styled.section`
   display: flex;
   justify-content: center;
 

@@ -12,6 +12,8 @@ const TextCard = styled.div`
   height: ${({ height }) => (height ? height : '400px')};
 
   border: ${({ border }) => (border ? border : 'none')};
+  border-bottom: ${({ borderBottom }) =>
+    borderBottom ? borderBottom : 'none'};
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : '0')};
 
   margin: ${({ margin }) => (margin ? margin : '0')};

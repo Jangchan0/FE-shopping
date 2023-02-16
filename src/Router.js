@@ -11,8 +11,8 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<ShoppingMall />} />
         <Route path="/Payment" element={<Payment />} />
-        <Route path="/Payment/:PaymentClause" element={<PaymentClause />} />
-        <Route path="/Payment/:PaymentConfirm" element={<PaymentConfirm />} />
+        <Route path="/PaymentClause" element={<PaymentClause />} />
+        <Route path="/PaymentConfirm" element={<PaymentConfirm />} />
       </Routes>
     </BrowserRouter>
   );
