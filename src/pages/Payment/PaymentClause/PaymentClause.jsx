@@ -14,19 +14,23 @@ const PaymentClause = () => {
 
   return (
     <ClauseContainer>
-      <TextCard
-        margin="5rem auto"
-        width="65rem"
-        height="7rem"
-        fontSize="1.1rem"
-      >
-        <span className="topTitle">{clause[1].ClauseTitle[0].value}</span>
-      </TextCard>
-      <div>
-        {clause[0].ClauseContents.map((value, i) => {
-          return <Togle key={i} clause={value} />;
-        })}
-      </div>
+      {clause.length > 1 && (
+        <>
+          <TextCard
+            margin="5rem auto"
+            width="65rem"
+            height="7rem"
+            fontSize="1.1rem"
+          >
+            <span className="topTitle">{clause[1].ClauseTitle[0].value}</span>
+          </TextCard>
+          <div>
+            {clause[0].ClauseContents.map((value, i) => {
+              return <Togle key={i} clause={value} />;
+            })}
+          </div>
+        </>
+      )}
     </ClauseContainer>
   );
 };

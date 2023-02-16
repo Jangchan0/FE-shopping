@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import arrow from '../../../../assets/images/payment/Vector.png';
 import arrowR from '../../../../assets/images/payment/VectorR.png';
 
-const Togle = ({ clause }, { i }) => {
+const Togle = ({ clause }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleTogle = () => {
@@ -17,7 +17,7 @@ const Togle = ({ clause }, { i }) => {
           <ClauseTitle> {clause.title}</ClauseTitle>
           <ViewContents onClick={handleTogle}>
             <span>내용보기</span>
-            <img src={isOpen ? arrow : arrowR} alt="화살표" />
+            <img src={isOpen ? arrowR : arrow} alt="화살표" />
           </ViewContents>
         </div>
       </TogleWrapper>
