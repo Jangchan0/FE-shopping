@@ -1,11 +1,75 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components/macro';
 import PaymentInputArea from './components/PaymentInputArea';
 import PaymentAmount from './components/PaymentAmount';
 import ProductCard from './components/ProductCard';
 import Button from '../../components/Button';
 
+const USER_DATA = [
+  {
+    userInfo: [
+      {
+        name: 'HongGildong',
+        email: 'iamport@siot.do',
+        cellphone: '010-1234-5678',
+        address: '서울특별시 강남구 삼성동',
+        postCode: '123-456',
+        buyItems: [
+          {
+            buyItem_id: 1,
+            buyItem_name: '[EBS]수학',
+            imp_uid: '',
+            merchant_uid: '',
+          },
+        ],
+      },
+    ],
+  },
+];
+
 const Payment = () => {
+  const handleRequestPayment = () => {
+    const { IMP } = window;
+    IMP.init('imp00022846');
+
+    IMP.request_pay(
+      {
+        pg: 'html5_inicis',
+        pay_method: 'card',
+        merchant_uid: 'merchant_' + new Date().getTime(),
+        name: '주문명:결제테스트',
+        amount: 100,
+        buyer_email: 'iamport@siot.do',
+        buyer_name: '구매자이름',
+        buyer_tel: '010-1234-5678',
+        buyer_addr: '서울특별시 강남구 삼성동',
+        buyer_postcode: '123-456',
+        m_redirect_url: '/',
+      },
+      function (rsp) {
+        if (rsp.success) {
+          fetch('http://onecue.cafe24app.com/api/pay/complete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            data: {
+              imp_uid: rsp.imp_uid,
+              merchant_uid: rsp.merchant_uid,
+            },
+          })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+              alert('결제성공');
+            })
+            .catch(err => {
+              console.log(err);
+              alert('결제실패');
+            });
+        }
+      }
+    );
+  };
+
   return (
     <PaymentContainer>
       <PaymentTitleWrapper>
@@ -35,6 +99,7 @@ const Payment = () => {
             fontSize="1.5rem"
             width="41rem"
             height="4.5rem"
+            onClick={handleRequestPayment}
           >
             결제하기
           </Button>
