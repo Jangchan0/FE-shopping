@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import TextCard from '../../../components/TextCard';
 
-const PaymentAmount = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const onClickCheck = () => {
-    setIsChecked(!isChecked);
-  };
+const PaymentAmount = ({ isAgreed, setIsAgreed }) => {
+  // const isAgreed = props.isAgreed;
+  // const setIsAgreed = props.setIsAgreed;
 
   return (
     <>
@@ -29,7 +27,12 @@ const PaymentAmount = () => {
       <PaymentMethod>
         <span>결제 수단</span>
         <CreaditCard>
-          <CreaditCardBox type="checkBox" onClick={onClickCheck} />
+          <CreaditCardBox
+            type="checkBox"
+            onClick={() =>
+              setIsAgreed({ ...isAgreed, amountCheck: !isAgreed.amountCheck })
+            }
+          />
           <span>신용카드</span>
         </CreaditCard>
       </PaymentMethod>
