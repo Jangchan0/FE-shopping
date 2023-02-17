@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
+import Post from './Post';
 
 const PaymentInputArea = () => {
+  const [popUp, setPopUp] = useState(false);
+
+  const [userInfo, setUserInfo] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    address: '',
+    detailAddress: '',
+  });
+
+  console.log(userInfo);
+
+  const handleUserInfo = (e, input) => {
+    const { id } = input;
+    const value = e.target.value;
+    setUserInfo(userInfo => {
+      return { ...userInfo, [id]: value };
+    });
+  };
+
+  const handleModal = useRef;
+
   return (
     <InputAreaContainer>
       <div>받는 분 정보 입력</div>
@@ -18,6 +41,7 @@ const PaymentInputArea = () => {
                 fontSize="20px"
                 width="30.25rem"
                 height="4.75rem"
+                onChange={e => handleUserInfo(e, input)}
               />
             </HandleInput>
           );
@@ -25,7 +49,13 @@ const PaymentInputArea = () => {
         <Address>
           <AddressButton>
             <span>주소</span>
-            <Button>우편번호 찾기</Button>
+            <Button
+              onClick={() => {
+                setPopUp(!popUp);
+              }}
+            >
+              우편번호 찾기
+            </Button>
           </AddressButton>
           <div>
             <Input
@@ -37,6 +67,10 @@ const PaymentInputArea = () => {
               bgColor="#E9E9E9"
               border="#D0D5DD"
               disabled
+              value={userInfo.address}
+              onChange={e =>
+                setUserInfo({ ...userInfo, address: e.target.value })
+              }
             />
             <Input
               placeholder="상세주소를 입력하세요"
@@ -45,9 +79,21 @@ const PaymentInputArea = () => {
               width="30.25rem"
               height="4.75rem"
               margin="0 0 0 90px"
+              onChange={e =>
+                setUserInfo({ ...userInfo, detailAddress: e.target.value })
+              }
             />
           </div>
         </Address>
+        {popUp && (
+          <div>
+            <Post
+              userInfo={userInfo}
+              setUserInfo={setUserInfo}
+              ref={handleModal}
+            />
+          </div>
+        )}
       </InputZone>
     </InputAreaContainer>
   );
@@ -103,17 +149,17 @@ const AddressButton = styled.div`
 
 const USER_INFO = [
   {
-    id: 1,
+    id: 'name',
     value: '이름',
     placeholder: '이름을 입력하세요',
   },
   {
-    id: 2,
+    id: 'email',
     value: '이메일',
     placeholder: '이메일을 입력하세요',
   },
   {
-    id: 3,
+    id: 'phoneNumber',
     value: '휴대폰',
     placeholder: '휴대폰 번호를 입력하세요',
   },
