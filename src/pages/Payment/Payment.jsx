@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components/macro';
 import PaymentInputArea from './components/PaymentInputArea';
@@ -29,6 +29,22 @@ const USER_DATA = [
 ];
 
 const Payment = () => {
+  const [isAgreed, setIsAgreed] = useState({
+    amountCheck: false,
+    checkAgreed: false,
+  });
+
+  const isDisabled = isAgreed.amountCheck && isAgreed.checkAgreed;
+
+  const ischeckedBox = () => {
+    if (isAgreed.amountCheck === false) {
+      alert('결제수단을 선택해주세요');
+    }
+    if (isAgreed.checkAgreed === false) {
+      alert('개인정보 이용, 제공 및 결제에 동의해주세요');
+    }
+  };
+
   const handleRequestPayment = () => {
     const { IMP } = window;
     IMP.init('imp00022846');
@@ -81,23 +97,36 @@ const Payment = () => {
           <PaymentInputArea />
         </PaymentInputZone>
         <PaymentInformation>
-          <PaymentAmount />
+          <PaymentAmount isAgreed={isAgreed} setIsAgreed={setIsAgreed} />
         </PaymentInformation>
         <PaymentConfirmZone>
           <Agreement>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onClick={() =>
+                setIsAgreed({
+                  ...isAgreed,
+                  checkAgreed: !isAgreed.checkAgreed,
+                })
+              }
+            />
             <span>
               주문 내용을 확인하였으며, 개인정보 이용, 제공 및 결제에
               동의합니다.
             </span>
-            <a>자세히보기</a>
+            <a href="">자세히보기</a>
           </Agreement>
           <Button
             margin="1rem auto"
             fontSize="1.5rem"
             width="41rem"
             height="4.5rem"
-            onClick={handleRequestPayment}
+            onClick={() => {
+              ischeckedBox();
+              {
+                isDisabled && handleRequestPayment();
+              }
+            }}
           >
             결제하기
           </Button>
