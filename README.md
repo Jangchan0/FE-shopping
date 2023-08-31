@@ -4,22 +4,22 @@
 
 ## 상품 목록 페이지
 
-<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/634e432a-19bb-4378-82ac-e8e6fb805007" />
+<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/22729e82-180a-4ab9-b0ac-18e64ba67787" />
 
 
 ## 결제 페이지
 
-<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/0dfefa4e-c4fa-4c53-9013-e7e265495c3b" />
-<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/6f49700a-658a-4f67-b651-416649548f01" />
+<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/5b77e01d-fb92-4e6c-b6a8-da28593d3245" />
+<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/74d6486b-81b8-4722-901e-c367107ea739" />
 
 
 
 ## 약관 페이지
 
-<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/f2586e21-b7c6-4d96-8649-06d8d610b3b1" />
+<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/e68f04ff-4f86-4c7a-9b43-3e7b3d59cf19" />
 
 
 ## 결제완료 페이지
 
-<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/dd7b71db-d1ae-4e20-9159-5274fb218829" />
+<img src="https://github.com/Jangchan0/FE-shopping/assets/117936577/950135a5-51fa-47e0-9679-98cdd674674b" />
 
